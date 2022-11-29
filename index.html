@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function cloneObj(obj) {
+            const cloneObject = {};
+            for (const key in obj) {
+                cloneObject[key] = obj[key];
+            }
+            return cloneObject;
+        }
+        function getValues(obj) {
+            valuesArray = [];
+            for (const key in obj) {
+                valuesArray.push(obj[key])
+            }
+            return valuesArray;
+        }
+        function getKeys(obj) {
+            keysArray = [];
+            for (const key in obj) {
+                keysArray.push(key)
+            }
+            return keysArray;
+        }
+        function getEntries(obj){
+            entriesArray = []
+            for (const key in obj) {
+                entries=[];
+                entries.push(key)
+                entries.push(obj[key])
+                entriesArray.push(entries)
+            }
+
+            return entriesArray;
+        }
+
+
+        const user = {
+            name: 'Alex',
+            surname: 'Zvada',
+            age: 31,
+            city: 'Starokonstantinov'
+        }
+        console.log(cloneObj(user));
+        console.log(getValues(user));
+        console.log(getKeys(user));
+        console.log(getEntries(user));
+    </script>
+</body>
+
+</html>
