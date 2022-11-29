@@ -18,23 +18,23 @@
             return cloneObject;
         }
         function getValues(obj) {
-            valuesArray = [];
+            let valuesArray = [];
             for (const key in obj) {
                 valuesArray.push(obj[key])
             }
             return valuesArray;
         }
         function getKeys(obj) {
-            keysArray = [];
+            let keysArray = [];
             for (const key in obj) {
                 keysArray.push(key)
             }
             return keysArray;
         }
         function getEntries(obj){
-            entriesArray = []
+            let entriesArray = []
             for (const key in obj) {
-                entries=[];
+                let entries=[];
                 entries.push(key)
                 entries.push(obj[key])
                 entriesArray.push(entries)
